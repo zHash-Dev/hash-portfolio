@@ -1,0 +1,261 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('https://raw.githubusercontent.com/Minato-mba/Minato-mba.github.io/main/assets/fonts/minecraft.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Minecraft';
+    src: url('https://raw.githubusercontent.com/Minato-mba/Minato-mba.github.io/main/assets/fonts/minecraft-ten.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #0c73e7;
+    --secondary-color: #1a1a1b;
+    --background-color: #111111;
+    --text-color: #a7a7a7;
+}
+
+::selection {
+    background: var(--primary-color);
+    color: #ffffff;
+}
+
+* {
+    font-family: 'Minecraft', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    width: 100%;
+    padding: 28px 8%;
+    position: sticky;
+    top: 0;
+    background-color: var(--background-color);
+    z-index: 3;
+    border-bottom: 1px solid var(--secondary-color);
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-links a:hover {
+    transform: scale(1.1);
+    color: var(--primary-color);
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: 0.3s ease-in-out;
+    color: var(--text-color);
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    image-rendering: pixelated;
+    transition: 0.3s ease;
+}
+
+.logo img:hover {
+    transform: rotate(-5deg) scale(1.1);
+}
+
+
+#projects,
+#about,
+#contact {
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+
+    max-width: 80%;
+    margin: auto;
+}
+
+.card {
+    background: #1f1f1f;
+
+    border: 3px solid #181818;
+
+    padding: 2rem;
+
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    transition: 0.5s ease;
+
+    box-shadow: 8px 8px 0px #000;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card p {
+    transition: 0.5s ease;
+    background: var(--primary-color);
+    padding: 0.8rem 1.5rem;
+    color: #fff;
+    box-shadow: 8px 8px 0px #000;
+    rotate: -5deg;
+    font-size: 1.2rem;
+
+    position: absolute;
+
+
+    top: 30px;
+    right: 30px;
+
+    margin: 0;
+    z-index: 2;
+    letter-spacing: 2px;
+}
+
+.card:hover {
+    transform: scale(1.025) rotate(1deg);
+}
+
+.card-image {
+    background: #181818;
+    padding: 20px;
+
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    transition: .8s ease;
+}
+
+.card:hover img {
+    transform: scale(1.15) translateY(10px);
+}
+
+#projects {
+    min-height: 120vh;
+    padding: 28px 0;
+}
+
+#about p {
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#contact,
+#about {
+    width: 100%;
+    min-height: 30vh;
+
+    padding: 28px 8%;
+    background-color: var(--background-color);
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 50px;
+}
+
+.socials a {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: var(--text-color);
+
+    transition: .3s ease;
+
+    font-size: 1.5rem;
+}
+
+.socials i {
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+.socials a:nth-child(1):hover {
+    color: #ea4335;
+}
+
+.socials a:nth-child(2):hover {
+    color: #ffffff;
+}
+
+.socials a:nth-child(3):hover {
+    color: #5865F2;
+}
+
+.socials p {
+    font-size: 15px;
+    margin: 0;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+
+    color: white;
+
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    padding: 50px 8%;
+    background-color: var(--background-color);
+    border-top: 1px solid var(--secondary-color);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
